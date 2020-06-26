@@ -1,4 +1,0 @@
-D:\Dark Matter Research 2020\DarkMatterResearch\EllipseOverlay\obj\Debug\netcoreapp3.1\EllipseOverlay.csprojAssemblyReference.cache
-D:\Dark Matter Research 2020\DarkMatterResearch\EllipseOverlay\obj\Debug\netcoreapp3.1\EllipseOverlay.AssemblyInfoInputs.cache
-D:\Dark Matter Research 2020\DarkMatterResearch\EllipseOverlay\obj\Debug\netcoreapp3.1\EllipseOverlay.AssemblyInfo.cs
-D:\Dark Matter Research 2020\DarkMatterResearch\EllipseOverlay\obj\Debug\netcoreapp3.1\EllipseOverlay.csproj.CoreCompileInputs.cache
