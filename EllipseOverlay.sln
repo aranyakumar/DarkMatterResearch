@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllipseOverlay", "EllipseOverlay.csproj", "{57E1948F-D489-4B9D-98D0-9C3207971C2E}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "EllipseOverlay", "EllipseOverlay.pyproj", "{B1B7DE17-88C6-40BA-A839-B557ABEB69DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57E1948F-D489-4B9D-98D0-9C3207971C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57E1948F-D489-4B9D-98D0-9C3207971C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57E1948F-D489-4B9D-98D0-9C3207971C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57E1948F-D489-4B9D-98D0-9C3207971C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B7DE17-88C6-40BA-A839-B557ABEB69DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B7DE17-88C6-40BA-A839-B557ABEB69DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2880A6C5-9E91-4CA0-AA6B-BACF5EDE89E0}
+		SolutionGuid = {D282448E-3E8D-43E2-99B0-60BD1AD5108A}
 	EndGlobalSection
 EndGlobal
