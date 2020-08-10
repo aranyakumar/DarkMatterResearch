@@ -1,3 +1,14 @@
-.vs/
-EllipseOverlay.pyproj/
-EllipseOverlay.sln/
+/.vs/*
+/EllipseOverlay.pyproj
+/EllipseOverlay.sln
+/gaussian_noise.png
+/granite.jpg
+/graniteSlab.jpeg
+/graniteSlab_01_01.png
+/graniteSlab_01_02.png
+/graniteSlab_02_01.png
+/graniteSlab_02_02.png
+/graniteSlab_01_fake.png
+/graniteSlab_02_fake.png
+/graniteSlab_03_fake.png
+/graniteSlab_04_fake.png
