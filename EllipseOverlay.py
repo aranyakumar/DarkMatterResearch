@@ -5,11 +5,11 @@ import random
 import numpy as np
 from matplotlib import pyplot as plt
 from skimage.color import rgb2lab, deltaE_cie76
-import image_slicer
+from image_slicer import slice
 
 # Cut image into 4 subsections
 #im = cv2.imread('graniteSlab.jpeg')
-tiles = image_slicer.slice('granite.jpg', 4)
+tiles = slice('D:\Dark Matter Research 2020\DarkMatterResearch\agranite.jpg', 4)
 
 # Path
 im = cv2.imread("granite_02_02.png")
@@ -68,13 +68,35 @@ thickness = -1
    
 # Using cv2.ellipse() method 
 # Draw a ellipse with blue line borders of thickness of -1 px 
-image = cv2.ellipse(image, center_coordinates, axesLength, 0, 
+ellipse = cv2.ellipse(image, center_coordinates, axesLength, 0, 
                           0, 180, (255,255,255), -1) 
+ellipseImage = cv2.minAreaRect(ellipse)
 
 # Creating noise
 noise = np.random.normal(1000., 1000., (1000, 1000, 3))
-granite = cv2.imwrite("gaussian_noise.png", noise)
-   
+granite = cv2.imwrite("ellipseImage", noise)
+
+def overlay(img, img_overlay, alpha_mask):
+	y1, y2 = max(0, center_coordinates[1]), min(img.shape[0], center_coordinates[1] + img_overlay.shape[0])
+	x1, x2 = max(0, center_coordinates[0]), min(img.shape[1], center_coordinates[0] + img_overlay.shape[1])
+
+    # Overlay ranges
+	y1o, y2o = max(0, -center_coordinates[1]), min(img_overlay.shape[0], img.shape[0] - center_coordinates[1])
+	x1o, x2o = max(0, - center_coordinates[0]), min(img_overlay.shape[1], img.shape[1] - center_coordinates[0])
+
+    # Exit if nothing to do
+	if y1 >= y2 or x1 >= x2 or y1o >= y2o or x1o >= x2o:
+		return
+
+	channels = img.shape[2]
+
+	alpha = alpha_mask[y1o:y2o, x1o:x2o]
+	alpha_inv = 1.0 - alpha
+
+	for c in range(channels):
+		img[y1:y2, x1:x2, c] = (alpha * img_overlay[y1o:y2o, x1o:x2o, c] +
+								alpha_inv * img[y1:y2, x1:x2, c])
+
 # Displaying the image 
 while True:
 	# display the image and wait for a keypress
